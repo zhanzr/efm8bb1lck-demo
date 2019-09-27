@@ -1,0 +1,12 @@
+*.lst
+*.OBJ
+*.__i
+*.__ia
+*.__lnp
+*.lnp
+*.m51
+*.omf
+*.hex
+*.bin
+.metadata/
+outgoing

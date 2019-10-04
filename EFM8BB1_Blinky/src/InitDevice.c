@@ -35,10 +35,32 @@ extern void enter_DefaultMode_from_RESET(void) {
 //================================================================================
 extern void WDT_0_enter_DefaultMode_from_RESET(void) {
 	// $[WDTCN - Watchdog Timer Control]
-	//Disable Watchdog with key sequence
-	WDTCN = 0xDE; //First key
-	WDTCN = 0xAD; //Second key
+	// Deprecated
 	// [WDTCN - Watchdog Timer Control]$
+
+	// $[Watchdog Timer Init Variable Declarations]
+	uint32_t i;
+	bool ea;
+	// [Watchdog Timer Init Variable Declarations]$
+
+	// $[WDTCN_2 - Watchdog Timer Control]
+
+	// Feed WDT timer before disabling (Erratum WDT_E102)
+	WDTCN = 0xA5;
+
+	// Add 2 LFO cycle delay before disabling WDT (Erratum WDT_E102)
+	for (i = 0; i < (2 * 3062500UL) / (10000 * 3); i++) {
+		NOP();
+	}
+
+	// Disable WDT
+	ea = IE_EA;
+	IE_EA = 0;
+	WDTCN = 0xDE;
+	WDTCN = 0xAD;
+	IE_EA = ea;
+
+	// [WDTCN_2 - Watchdog Timer Control]$
 
 }
 

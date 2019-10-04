@@ -20,24 +20,24 @@ RM := rm -rf
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: EFM8BB1_Blinky.omf
+all: efm8_conf_prj_t1.omf
 
 # Tool invocations
-EFM8BB1_Blinky.omf: $(OBJS)
+efm8_conf_prj_t1.omf: $(OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Keil 8051 Linker'
-	LX51 "@EFM8BB1_Blinky.lnp" || $(RC)
+	LX51 "@efm8_conf_prj_t1.lnp" || $(RC)
 	@echo 'Finished building target: $@'
 
 # Change from all upper case to the expected case
-	@-mv "EFM8BB1_BLINKY.OMF.CRBUILD" "$@"
+	@-mv "EFM8_CONF_PRJ_T1.OMF.CRBUILD" "$@"
 
-# Generate hex file: EFM8BB1_Blinky.hex
-	@Ohx51 "EFM8BB1_Blinky.omf" "HEXFILE (EFM8BB1_Blinky.hex)" "H386" 2>&1 >/dev/null
+# Generate hex file: efm8_conf_prj_t1.hex
+	@Ohx51 "efm8_conf_prj_t1.omf" "HEXFILE (efm8_conf_prj_t1.hex)" "H386" 2>&1 >/dev/null
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS) EFM8BB1_Blinky.omf
+	-$(RM) $(EXECUTABLES)$(OBJS) efm8_conf_prj_t1.omf
 	-@echo ' '
 
 .PHONY: all clean dependents

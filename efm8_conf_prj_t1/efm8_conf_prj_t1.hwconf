@@ -4,6 +4,9 @@
     <property object="CLOCK_0" propertyId="ABPeripheral.included" value="true"/>
     <property object="CLOCK_0" propertyId="clock.clockselect.clocksourcedivider" value="SYSCLK / 1"/>
     <property object="CLOCK_0" propertyId="clock.clockselect.sysclk" value="24.500 MHz"/>
+    <property object="CRC_0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="CRC_0" propertyId="crc.crccontrol.crcinitializationvalue" value="0xFFFF"/>
+    <property object="CRC_0" propertyId="crc.crccontrol.enablecrcinitialization" value="Initialize"/>
     <property object="DefaultMode" propertyId="mode.diagramLocation" value="100, 100"/>
     <property object="INTERRUPT_0" propertyId="ABPeripheral.included" value="true"/>
     <property object="INTERRUPT_0" propertyId="interrupt.extendedinterruptenable1.enabletimer3interrupt" value="Enabled"/>

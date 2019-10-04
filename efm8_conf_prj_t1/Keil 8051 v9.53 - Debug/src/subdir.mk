@@ -37,6 +37,6 @@ src/%.OBJ: ../src/%.A51
 	@echo 'Finished building: $<'
 	@echo ' '
 
-src/efm8_conf_prj_t1_main.OBJ: D:/SiliconLabs/SimplicityStudio/v4_51/developer/sdks/8051/v4.1.6/Device/EFM8BB1/inc/SI_EFM8BB1_Register_Enums.h D:/efm8_prj/efm8_conf_prj_t1/inc/InitDevice.h D:/SiliconLabs/SimplicityStudio/v4_51/developer/sdks/8051/v4.1.6/Device/EFM8BB1/inc/SI_EFM8BB1_Defs.h D:/SiliconLabs/SimplicityStudio/v4_51/developer/sdks/8051/v4.1.6/Device/shared/si8051Base/si_toolchain.h D:/SiliconLabs/SimplicityStudio/v4_51/developer/sdks/8051/v4.1.6/Device/shared/si8051Base/stdint.h D:/SiliconLabs/SimplicityStudio/v4_51/developer/sdks/8051/v4.1.6/Device/shared/si8051Base/stdbool.h
+src/efm8_conf_prj_t1_main.OBJ: D:/SiliconLabs/SimplicityStudio/v4_51/developer/sdks/8051/v4.1.6/Device/shared/si8051Base/stdint.h D:/SiliconLabs/SimplicityStudio/v4_51/developer/sdks/8051/v4.1.6/Device/EFM8BB1/inc/SI_EFM8BB1_Register_Enums.h D:/efm8_prj/efm8_conf_prj_t1/inc/InitDevice.h D:/SiliconLabs/SimplicityStudio/v4_51/developer/sdks/8051/v4.1.6/Device/EFM8BB1/inc/SI_EFM8BB1_Defs.h D:/SiliconLabs/SimplicityStudio/v4_51/developer/sdks/8051/v4.1.6/Device/shared/si8051Base/si_toolchain.h D:/SiliconLabs/SimplicityStudio/v4_51/developer/sdks/8051/v4.1.6/Device/shared/si8051Base/stdbool.h
 
 

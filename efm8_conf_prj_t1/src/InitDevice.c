@@ -24,6 +24,7 @@ extern void enter_DefaultMode_from_RESET(void) {
 	WDT_0_enter_DefaultMode_from_RESET();
 	PORTS_1_enter_DefaultMode_from_RESET();
 	PBCFG_0_enter_DefaultMode_from_RESET();
+	CRC_0_enter_DefaultMode_from_RESET();
 	CLOCK_0_enter_DefaultMode_from_RESET();
 	TIMER16_3_enter_DefaultMode_from_RESET();
 	INTERRUPT_0_enter_DefaultMode_from_RESET();
@@ -208,6 +209,27 @@ extern void INTERRUPT_0_enter_DefaultMode_from_RESET(void) {
 
 	// $[IP - Interrupt Priority]
 	// [IP - Interrupt Priority]$
+
+}
+
+extern void CRC_0_enter_DefaultMode_from_RESET(void) {
+	// $[CRC0AUTO - DisableAuto]
+	// [CRC0AUTO - DisableAuto]$
+
+	// $[CRC0CN - CRC0 Control]
+	/***********************************************************************
+	 - Initialize the CRC result to ones or zeroes vased on the value of
+	 CRCVAL
+	 - CRC result is set to 0xFFFF on write of 1 to CRCINIT. 
+	 ***********************************************************************/
+	CRC0CN0 = CRC0CN0_CRCINIT__INIT | CRC0CN0_CRCVAL__SET_ONES;
+	// [CRC0CN - CRC0 Control]$
+
+	// $[CRC0CNT - CRC0 Automatic Flash Sector Count]
+	// [CRC0CNT - CRC0 Automatic Flash Sector Count]$
+
+	// $[CRC0AUTO - CRC0 Automatic Control]
+	// [CRC0AUTO - CRC0 Automatic Control]$
 
 }
 

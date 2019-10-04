@@ -19,6 +19,7 @@ extern void enter_DefaultMode_from_RESET(void);
 extern void WDT_0_enter_DefaultMode_from_RESET(void);
 extern void PORTS_1_enter_DefaultMode_from_RESET(void);
 extern void PBCFG_0_enter_DefaultMode_from_RESET(void);
+extern void CRC_0_enter_DefaultMode_from_RESET(void);
 extern void CLOCK_0_enter_DefaultMode_from_RESET(void);
 extern void TIMER16_3_enter_DefaultMode_from_RESET(void);
 extern void INTERRUPT_0_enter_DefaultMode_from_RESET(void);
